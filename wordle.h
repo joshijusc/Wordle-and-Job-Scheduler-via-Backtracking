@@ -1,7 +1,10 @@
 #ifndef WORDLE_H
 #define WORDLE_H
 
-#ifdef RECCHECK
+#include <set>
+#include <string>
+
+#ifndef RECCHECK
 #include <set>
 #include <string>
 #endif
@@ -18,8 +21,8 @@
  * @return std::set<std::string> - Set of all words that meet the criteria
  */
 std::set<std::string> wordle(
-    const std::string& in,
-    const std::string& floating,
-    const std::set<std::string>& dict);
+        const std::string& in,
+        const std::string& floating,
+        const std::set<std::string>& dict);
 
 #endif
